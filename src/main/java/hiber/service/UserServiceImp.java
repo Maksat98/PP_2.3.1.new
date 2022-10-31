@@ -9,7 +9,6 @@ import javax.validation.Valid;
 import java.util.List;
 
 @Service
-
 public class UserServiceImp implements UserService {
 
     private final UserDao userDao;
