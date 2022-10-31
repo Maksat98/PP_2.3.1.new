@@ -61,5 +61,16 @@ public class User {
     public void setAge(int age) {
         this.age = age;
     }
+@Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return getAge() == user.getAge() && getName().equals(user.getName()) && getLastName().equals(user.getLastName());
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getLastName(), getAge());
+    }
 }
